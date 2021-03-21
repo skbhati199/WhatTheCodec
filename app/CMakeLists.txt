@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.10.2)
 
 set(ffmpeg_dir ${CMAKE_SOURCE_DIR}/../ffmpeg-android-maker/output)
 set(ffmpeg_libs ${ffmpeg_dir}/lib/${ANDROID_ABI})
@@ -9,7 +9,7 @@ set(
         # List variable name
         ffmpeg_libs_names
         # Values in the list
-        avutil avformat avcodec swscale)
+        avutil avformat avcodec swscale swresample)
 
 foreach (ffmpeg_lib_name ${ffmpeg_libs_names})
     add_library(
